@@ -13,7 +13,7 @@ export default async function Page() {
             "RESAS APIから都道府県のリストを取得し、チェックボックスを動的に生成する機能を提供します。選択された都道府県の「人口構成」をRESAS APIから取得します。",
         buttons: [{href: "/demo", children: "デモを見る"}],
         image: {
-            src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+            src: "/title.png",
             alt: "Placeholder image",
             width: 600,
             height: 600,
