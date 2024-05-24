@@ -8,9 +8,10 @@ type year = {
     population: number
 }
 type trend = {
-    label: '老年人口' | '総人口' | '生産年齢人口',
+    label:PopulationType ,
     data: year[]
 }
+type PopulationType = '老年人口' | '総人口' | '生産年齢人口'|'年少人口'
 type PrefTrend = {
     prefCode: PrefectureCode,
     prefName: string,
@@ -36,4 +37,5 @@ interface Input {
     message: null;
     result: InputResult;
 }
-export type { PrefTrend, year, trend, InputTrend,InputResult,Input,InputDataPoint,PrefectureCode}
+export type { PrefTrend, year, trend, InputTrend,InputResult,Input,InputDataPoint,PrefectureCode,PopulationType}
+

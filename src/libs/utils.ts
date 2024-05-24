@@ -1,4 +1,4 @@
-import {Input, PrefectureCode, PrefTrend, trend} from './types';
+import {Input, PopulationType, PrefectureCode, PrefTrend, trend} from './types';
 
 
 const transformInputToPrefTrend = (prefCode:PrefectureCode,input: Input) :PrefTrend =>  {
@@ -8,7 +8,7 @@ const transformInputToPrefTrend = (prefCode:PrefectureCode,input: Input) :PrefTr
             population: d.value
         }));
         return {
-            label: trend.label as '老年人口' | '総人口' | '生産年齢人口',
+            label: trend.label as PopulationType,
             data: data
         };
     });
@@ -21,11 +21,23 @@ const transformInputToPrefTrend = (prefCode:PrefectureCode,input: Input) :PrefTr
 
     return prefTrend;
 }
+const filterDataByDateRange = (data: PrefTrend, startDate: string, endDate: string): PrefTrend => {
+    const startYear = new Date(startDate).getFullYear();
+    const endYear = new Date(endDate).getFullYear();
+
+    return {
+        ...data,
+        data: data.data.map(trend => ({
+            ...trend,
+            data: trend.data.filter(yearData => yearData.year >= startYear && yearData.year <= endYear)
+        }))
+    };
+};
+
 
 
 function extractPopulationTrends(trend: trend): { years: number[], populations: number[] } {
     const populationTrends: Map<number, number> = new Map();
-
     trend.data.forEach(entry => {
             if (populationTrends.has(entry.year)) {
                 populationTrends.set(entry.year, populationTrends.get(entry.year)! + entry.population);
@@ -104,4 +116,4 @@ function getPrefNameByPrefCode(prefCode:PrefectureCode) {
 
 
 
-export {transformInputToPrefTrend, extractPopulationTrends,Prefdata};
+export {transformInputToPrefTrend, extractPopulationTrends,Prefdata,filterDataByDateRange};

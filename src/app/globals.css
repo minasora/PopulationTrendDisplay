@@ -1,6 +1,53 @@
+/* src/styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles for react-select */
+.react-select__control {
+    @apply bg-white dark:bg-gray-800 text-black dark:text-white border-gray-300 dark:border-gray-600;
+}
 
+.react-select__menu {
+    @apply bg-white dark:bg-gray-800 text-black dark:text-white;
+}
 
+.react-select__option {
+    @apply text-black dark:text-white;
+}
+
+.react-select__option--is-selected {
+    @apply bg-blue-500 dark:bg-blue-700 text-white;
+}
+
+.react-select__option--is-focused {
+    @apply bg-blue-100 dark:bg-blue-900;
+}
+
+.react-select__single-value {
+    @apply text-black dark:text-white;
+}
+
+.react-select__input {
+    @apply text-black dark:text-white;
+}
+
+.react-select__placeholder {
+    @apply text-gray-500 dark:text-gray-400;
+}
+
+.react-select__multi-value {
+    @apply bg-gray-200 dark:bg-gray-700 text-black dark:text-white;
+}
+
+.react-select__multi-value__label {
+    @apply text-black dark:text-white;
+}
+
+.react-select__multi-value__remove {
+    @apply text-gray-400 dark:text-gray-300;
+}
+
+.react-select__indicator {
+    @apply text-gray-600 dark:text-gray-300;
+}
