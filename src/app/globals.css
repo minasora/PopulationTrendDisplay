@@ -51,3 +51,10 @@
 .react-select__indicator {
     @apply text-gray-600 dark:text-gray-300;
 }
+.custom-tooltip-dark {
+    @apply text-black bg-white border border-black;
+}
+
+.custom-highlight-dark {
+    @apply bg-opacity-30 bg-white border border-black;
+}

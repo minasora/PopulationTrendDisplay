@@ -15,7 +15,7 @@ const LinkComponent: React.FC<LinkComponentProps> = ({ url, icon: Icon, classNam
             rel="noopener noreferrer"
             className="flex items-center text-inherit no-underline"
         >
-            <Icon className={`mr-2 ${className} `} />
+            <Icon className={`mr-2 ${className}`} data-testid="icon" />
         </a>
     );
 };

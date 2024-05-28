@@ -30,21 +30,24 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({ startDate, endDate, s
         <div className={`date-range-picker ${className} flex lg:flex-row flex-col items-center lg:justify-end`}>
             <div className="flex justify-start items-center m-2 w-full">
                 <input
+                    id="start-date"
                     type="date"
                     value={startDate}
                     onChange={handleStartDateChange}
                     className="p-1 border w-full lg:w-auto"
                 />
-                <label className="ml-2">から</label>
+                <label htmlFor="start-date" className="ml-2">から</label>
             </div>
+
             <div className="flex lg:justify-start justify-end items-center m-2 w-full">
                 <input
                     type="date"
+                    id="end-date"
                     value={endDate}
                     onChange={handleEndDateChange}
                     className="p-1 border w-full lg:w-auto"
                 />
-                <label className="ml-2">まで</label>
+                <label htmlFor="end-date" className="ml-2">まで</label>
             </div>
         </div>
     );

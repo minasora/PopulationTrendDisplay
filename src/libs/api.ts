@@ -7,10 +7,10 @@ async function getData(prefCode: PrefectureCode) {
     const options = {
         method: 'GET',
         headers: {
-            'X-API-KEY': 'L9ixiqey27OWaotJ4p2WIs1hsc7r3R7zl58OnFga'
+            'X-API-KEY': process.env.NEXT_PUBLIC_RESAS_API_KEY
         }
     };
-
+    // @ts-ignore
     const res = await fetch(url, options);
     if (!res.ok) {
         throw new Error('Failed to fetch data');

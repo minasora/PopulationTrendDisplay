@@ -48,7 +48,7 @@ export const Footer = (props: Footer4Props) => {
                         ))}
                     </div>
                 </div>
-                <div className="h-px w-full bg-black"/>
+                <div className="h-px w-full bg-black dark:bg-white"/>
                 <div
                     className="flex flex-col-reverse items-center justify-center justify-items-center pt-6 text-sm md:flex-row md:gap-x-6 md:pt-8">
                     <p className="mt-8 md:mt-0">{footerText}</p>

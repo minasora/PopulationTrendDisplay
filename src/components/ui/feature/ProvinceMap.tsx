@@ -97,7 +97,7 @@ const ProvinceMap: React.FC<ProvinceMapProps> = ({ selectedProvinces, onProvince
                     </Geographies>
                 </ZoomableGroup>
             </ComposableMap>
-            <div className="mt-6">
+            <div className="mt-6 zoom">
                 <input
                     type="range"
                     min="1"
