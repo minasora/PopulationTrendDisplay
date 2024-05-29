@@ -36,12 +36,6 @@ const initialData = {
 };
 
 const colorMap: { [key: string]: string } = {
-    "Hokkaido": "#FF6384",
-    "Aomori": "#36A2EB",
-    "Iwate": "#FFCE56",
-    "Miyagi": "#4BC0C0",
-    "Akita": "#9966FF",
-    // 可以继续添加其他省份的颜色映射
 };
 
 const generateUniqueColor = (existingColors: string[]): string => {

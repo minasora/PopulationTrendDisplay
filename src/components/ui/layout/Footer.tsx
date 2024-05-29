@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import React from "react";
 
 type Links = {
     title: string;
@@ -22,9 +23,9 @@ type Props = {
     footerText: string;
 };
 
-export type Footer4Props = React.ComponentPropsWithoutRef<"section"> & Props;
+export type FooterProps = React.ComponentPropsWithoutRef<"section"> & Props;
 
-export const Footer = (props: Footer4Props) => {
+export const Footer = (props: FooterProps) => {
     const {image, footerText, socialMediaLinks} = {
         ...props,
     } as Props;

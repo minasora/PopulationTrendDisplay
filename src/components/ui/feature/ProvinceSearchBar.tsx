@@ -9,13 +9,13 @@ import Select, { ActionMeta, MultiValue } from 'react-select';
 
 interface OptionType {
     label: string;
-    value: PrefectureCode; // Ensuring this is of type PrefectureCode
+    value: PrefectureCode;
     region: string;
 }
 
 const options: OptionType[] = Prefdata.map((pref) => ({
     label: pref.prefName,
-    value: pref.prefCode as PrefectureCode, // Ensuring this is cast to PrefectureCode
+    value: pref.prefCode as PrefectureCode,
     region: pref.region,
 }));
 

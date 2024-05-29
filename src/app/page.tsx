@@ -1,17 +1,15 @@
 import getData from "@/libs/api";
-import {Footer, Footer4Props} from "@/components/ui/layout/Footer";
+import {Footer, FooterProps} from "@/components/ui/layout/Footer";
 import {Header, HeaderProps} from "@/components/ui/layout/Header";
 import {BiLogoGithub} from "react-icons/bi";
 import {FaXTwitter} from "react-icons/fa6";
 
 export default async function Page() {
-    const data = await getData(4);
-    const dataArray = [data]
     const HeaderDefaults: HeaderProps = {
         heading: "都道府県別の人口動向",
         description:
             "RESAS APIから都道府県のリストを取得し、チェックボックスを動的に生成する機能を提供します。選択された都道府県の「人口構成」をRESAS APIから取得します。",
-        buttons: [{href: "/demo", children: "デモを見る"}],
+        buttons: [{href: "/demo", children: "デモを見る"},{href:"/document", children:"ドキュメントを読める"}],
         image: {
             src: "/title.png",
             alt: "Placeholder image",
@@ -19,7 +17,7 @@ export default async function Page() {
             height: 600,
         },
     };
-    const FooterDefaults: Footer4Props = {
+    const FooterDefaults: FooterProps = {
         image: {
             src: "logo.svg",
             alt: "Logo image",

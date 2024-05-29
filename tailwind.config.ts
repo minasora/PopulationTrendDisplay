@@ -15,6 +15,9 @@ const config: Config = {
       },
     },
   },
+  fontFamily: {
+    'm-plus-rounded': ['"M PLUS Rounded 1c"', 'sans-serif'],
+  },
   plugins: [],
   darkMode: 'class',
 };

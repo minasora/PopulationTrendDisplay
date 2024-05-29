@@ -17,4 +17,4 @@ const Placeholder = (props: React.JSX.IntrinsicAttributes & IContentLoaderProps)
 )
 
 
-export default Placeholder
+export default  Placeholder

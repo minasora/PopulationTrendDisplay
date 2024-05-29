@@ -1,5 +1,5 @@
 import React from 'react';
-
+import swal from 'sweetalert';
 interface DateRangePickerProps {
     startDate: string;
     endDate: string;
@@ -22,19 +22,23 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({ startDate, endDate, s
         if (new Date(newEndDate) >= new Date(startDate)) {
             setEndDate(newEndDate);
         } else {
-            alert('End date must be greater than or equal to the start date');
+           swal({
+               title: 'Error',
+               text: 'End date must be greater than or equal to the start date',
+               icon: 'error'
+           });
         }
     };
 
     return (
-        <div className={`date-range-picker ${className} flex lg:flex-row flex-col items-center lg:justify-end`}>
+        <div className={`date-range-picker ${className} flex md:flex-row flex-col items-center md:justify-end `}>
             <div className="flex justify-start items-center m-2 w-full">
                 <input
                     id="start-date"
                     type="date"
                     value={startDate}
                     onChange={handleStartDateChange}
-                    className="p-1 border w-full lg:w-auto"
+                    className="p-1 border w-full md:w-auto md:h-auto"
                 />
                 <label htmlFor="start-date" className="ml-2">から</label>
             </div>
@@ -45,7 +49,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({ startDate, endDate, s
                     id="end-date"
                     value={endDate}
                     onChange={handleEndDateChange}
-                    className="p-1 border w-full lg:w-auto"
+                    className="p-1 border w-full md:w-auto md:h-auto"
                 />
                 <label htmlFor="end-date" className="ml-2">まで</label>
             </div>
