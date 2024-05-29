@@ -1,5 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs";
-
+import path = require('path');
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
@@ -13,6 +13,6 @@ const config: StorybookConfig = {
     name: "@storybook/nextjs",
     options: {},
   },
-  staticDirs: ["..\\public"],
+  staticDirs: [path.resolve(__dirname, '../public')],
 };
 export default config;
