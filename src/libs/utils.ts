@@ -13,13 +13,11 @@ const transformInputToPrefTrend = (prefCode:PrefectureCode,input: Input) :PrefTr
         };
     });
 
-    const prefTrend: PrefTrend = {
+    return {
         prefCode: prefCode,
         prefName: getPrefNameByPrefCode(prefCode),
         data: trends
     };
-
-    return prefTrend;
 }
 const filterDataByDateRange = (data: PrefTrend, startDate: string, endDate: string): PrefTrend => {
     const startYear = new Date(startDate).getFullYear();
@@ -57,6 +55,14 @@ function extractPopulationTrends(trend: trend): { years: number[], populations: 
 
     return { years, populations };
 }
+
+
+
+function getPrefNameByPrefCode(prefCode:PrefectureCode) {
+    const result = Prefdata.find(pref => pref.prefCode === prefCode);
+    return result ? result.prefName : "Prefecture not found";
+}
+
 const Prefdata = [
     { prefCode: 1, prefName: "北海道", region: "北海道" },
     { prefCode: 2, prefName: "青森県", region: "東北" },
@@ -106,14 +112,8 @@ const Prefdata = [
     { prefCode: 46, prefName: "鹿児島県", region: "九州" },
     { prefCode: 47, prefName: "沖縄県", region: "九州" }
 ];
-function getPrefNameByPrefCode(prefCode:PrefectureCode) {
-    const result = Prefdata.find(pref => pref.prefCode === prefCode);
-    return result ? result.prefName : "Prefecture not found";
-}
 
 
 
 
-
-
-export {transformInputToPrefTrend, extractPopulationTrends,Prefdata,filterDataByDateRange};
+export {getPrefNameByPrefCode,transformInputToPrefTrend, extractPopulationTrends,filterDataByDateRange,Prefdata};

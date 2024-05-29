@@ -1,12 +1,23 @@
-// components/ToggleBtn.js
-'use client'
-import { useTheme } from 'next-themes'
-import React from "react";
+'use client';
+import { useTheme } from 'next-themes';
+import React, { useEffect, useState } from 'react';
+
 interface LinkComponentProps {
     className?: string;
 }
-const ToggleBtn: React.FC<LinkComponentProps> = ({className}) => {
-    const { theme, setTheme } = useTheme()
+
+const ToggleBtn: React.FC<LinkComponentProps> = ({ className }) => {
+    const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return null; // Render nothing on the server
+    }
+
     return (
         <button
             type="button"

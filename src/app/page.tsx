@@ -9,7 +9,7 @@ export default async function Page() {
         heading: "都道府県別の人口動向",
         description:
             "RESAS APIから都道府県のリストを取得し、チェックボックスを動的に生成する機能を提供します。選択された都道府県の「人口構成」をRESAS APIから取得します。",
-        buttons: [{href: "/demo", children: "デモを見る"},{href:"/document", children:"ドキュメントを読める"}],
+        buttons: [{href: "/demo", children: "デモを見る"},{href:"https://population-trend-display-document.vercel.app/", children:"ドキュメントを読める"}],
         image: {
             src: "/title.png",
             alt: "Placeholder image",

@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,6 +50,7 @@
 .react-select__indicator {
     @apply text-gray-600 dark:text-gray-300;
 }
+
 .custom-tooltip-dark {
     @apply text-black bg-white border border-black;
 }

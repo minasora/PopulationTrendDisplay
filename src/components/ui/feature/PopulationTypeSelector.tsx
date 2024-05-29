@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Select from 'react-select';
 import { PopulationType } from '@/libs/types';
@@ -24,6 +25,7 @@ const PopulationTypeSelector: React.FC<PopulationTypeSelectorProps> = ({ populat
                 onChange={(selectedOption) => setPopulationType(selectedOption?.value as PopulationType)}
                 classNamePrefix="react-select"
                 className="dark:bg-gray-800 dark:text-white"
+                instanceId="population-type-selector"
             />
         </div>
     );

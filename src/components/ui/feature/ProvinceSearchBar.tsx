@@ -1,12 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
 import makeAnimated from 'react-select/animated';
 import { Prefdata } from '@/libs/utils';
 import { PrefTrend, PrefectureCode } from '@/libs/types';
 import Select, { ActionMeta, MultiValue } from 'react-select';
-
+import { useId } from 'react';
 interface OptionType {
     label: string;
     value: PrefectureCode;
@@ -44,12 +43,8 @@ interface ProvinceAutocompleteProps {
 }
 
 const ProvinceAutocomplete: React.FC<ProvinceAutocompleteProps> = ({ selectedProvinces, onProvinceChange, className }) => {
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
+    const [isMounted, setIsMounted] = useState(false);
+    useEffect(() => setIsMounted(true), []);
     const handleChange = (newValue: MultiValue<OptionType>, actionMeta: ActionMeta<OptionType>) => {
         const value = newValue ? newValue.map(option => ({
             prefCode: option.value as PrefectureCode,
@@ -65,11 +60,9 @@ const ProvinceAutocomplete: React.FC<ProvinceAutocompleteProps> = ({ selectedPro
         region: options.find(opt => opt.value === province.prefCode)?.region || '',
     }));
 
-    if (!isClient) {
-        return null;
-    }
 
-    return (
+
+    return isMounted? (
         <Select
             className={`w-full ${className}`}
             classNamePrefix="react-select"
@@ -80,9 +73,9 @@ const ProvinceAutocomplete: React.FC<ProvinceAutocompleteProps> = ({ selectedPro
             onChange={handleChange}
             placeholder="都道府県を選ぶ"
             closeMenuOnSelect={false}
-            instanceId="province-autocomplete"
+            instanceId={"province-autocomplete"}
         />
-    );
+    ) : null;
 };
 
 export default ProvinceAutocomplete;
