@@ -40,6 +40,7 @@ npm run test
 - **ドキュメント:** コンポーネントとその使用例をドキュメント化するためにStorybookを使用しています。
 - **テスト:** アプリケーションのテストにはJestを使用しています。
 - **型の安全性:** TypeScriptを使用して型の安全性を確保しています。
+- **CI/CD:** CI/CDにはGitHub Actionsを使用しています。
 
 ## 技術スタック
 
@@ -49,6 +50,7 @@ npm run test
 - **Documentation + Component Testing**: [Storybook](https://storybook.js.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Deployment**: [Vercel](https://vercel.com/)
+- **CI/CD**: [GitHub Actions](https://github.com)
 
 ## Todo
 

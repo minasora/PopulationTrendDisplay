@@ -43,6 +43,7 @@ the [project documentation](https://population-trend-display-document.vercel.app
 - **Documentation:** Storybook is used to document components and their use cases.
 - **Testing:** Jest is used to test the application.
 - **Type Safety:** TypeScript is used to ensure type safety.
+- **CI/CD:** GitHub Actions is used for CI/CD.
 
 ## Tech Stack
 
@@ -52,6 +53,7 @@ the [project documentation](https://population-trend-display-document.vercel.app
 - **Documentation + Component Testing**: [Storybook](https://storybook.js.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Deployment**: [Vercel](https://vercel.com/)
+- **CI/CD**: [GitHub Actions](https://github.com)
 
 ## Todo
 
