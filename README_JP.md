@@ -29,7 +29,7 @@ npm run storybook
 npm run test
 ```
 
-プロジェクトの詳細については、[プロジェクトドキュメント](https://population-trend-display-document.vercel.app/?path=/docs/stories-introduction--docs)
+プロジェクトの詳細については、[プロジェクトドキュメント](https://population-trend-display-document.vercel.app/?path=/docs/introduction--docs)
 をご覧ください。
 
 ## 特徴

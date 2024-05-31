@@ -31,7 +31,7 @@ npm run test
 ```
 
 To know more about the project, visit
-the [project documentation](https://population-trend-display-document.vercel.app/?path=/docs/stories-introduction--docs)
+the [project documentation](https://population-trend-display-document.vercel.app/?path=/docs/introduction--docs)
 
 ###
 
