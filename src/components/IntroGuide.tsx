@@ -52,10 +52,9 @@ const IntroGuide: React.FC = () => {
 
       intro.start();
       setHasStarted(true);
-      localStorage.setItem("hasSeenIntro", "true");
     };
 
-    if (!hasStarted && !localStorage.getItem("hasSeenIntro")) {
+    if (!hasStarted) {
       setTimeout(startIntro, 200);
     }
   }, [theme, hasStarted]);

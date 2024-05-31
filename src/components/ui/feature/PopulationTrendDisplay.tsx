@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import TrendGraph from "@/components/ui/chart/TrendGraph";
 import getData from "@/libs/api";
-import { PrefectureCode, PrefTrend, PopulationType } from "@/libs/types";
+import { PopulationType, PrefectureCode, PrefTrend } from "@/libs/types";
 import PopulationTypeSelector from "@/components/ui/feature/PopulationTypeSelector";
 import DateRangePicker from "@/components/ui/base/DateRangePicker";
 import { filterDataByDateRange } from "@/libs/utils";
@@ -70,7 +70,7 @@ const PopulationTrendDisplay: React.FC<PopulationTrendDisplayProps> = ({
         endDate={endDate}
         setStartDate={setStartDate}
         setEndDate={setEndDate}
-        className="w-full  flex flex-row"
+        className="w-full  flex flex-row mt-7"
       />
     </div>
   );
