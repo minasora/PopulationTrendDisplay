@@ -1,0 +1,116 @@
+# Function: extractPopulationTrends()
+
+> **extractPopulationTrends**(`trend`): `object`
+
+trendオブジェクトから人口動態を抽出します。
+
+## Parameters
+
+• **trend**: `trend`
+
+人口動態データ
+
+## Returns
+
+`object`
+
+- 年と人口の配列を含むオブジェクト
+
+### populations
+
+> **populations**: `number[]`
+
+### years
+
+> **years**: `number[]`
+
+## Source
+
+[utils.ts:68](https://github.com/minasora/PopulationTrendDisplay/blob/9b6916f2d9e634cddf515d0c9e11d37aa79b4f22/src/libs/utils.ts#L68)
+
+
+
+# Function: filterDataByDateRange()
+
+> **filterDataByDateRange**(`data`, `startDate`, `endDate`): `PrefTrend`
+
+指定された日付範囲内のデータにフィルタリングされたPrefTrendオブジェクトを返します。
+
+## Parameters
+
+• **data**: `PrefTrend`
+
+PrefTrendオブジェクト
+
+• **startDate**: `string`
+
+開始日付（YYYY-MM-DD形式）
+
+• **endDate**: `string`
+
+終了日付（YYYY-MM-DD形式）
+
+## Returns
+`PrefTrend`
+
+- フィルタリングされたPrefTrendオブジェクト
+
+## Source
+
+[utils.ts:44](https://github.com/minasora/PopulationTrendDisplay/blob/9b6916f2d9e634cddf515d0c9e11d37aa79b4f22/src/libs/utils.ts#L44)
+
+
+
+
+
+
+
+
+# Function: getPrefNameByPrefCode()
+
+> **getPrefNameByPrefCode**(`prefCode`): `string`
+
+都道府県コードから都道府県名を取得します。
+
+## Parameters
+• **prefCode**: `PrefectureCode`
+- 都道府県コード
+
+## Returns
+
+`string`
+
+- 都道府県名
+
+## Source
+
+[utils.ts:101](https://github.com/minasora/PopulationTrendDisplay/blob/9b6916f2d9e634cddf515d0c9e11d37aa79b4f22/src/libs/utils.ts#L101)
+
+
+
+
+# Function: transformInputToPrefTrend()
+
+> **transformInputToPrefTrend**(`prefCode`, `input`): `PrefTrend`
+
+PrefectureCodeとInputを基にPrefTrendオブジェクトを生成します。
+
+## Parameters
+
+• **prefCode**: `PrefectureCode`
+
+都道府県コード
+
+• **input**: `Input`
+
+入力データ
+
+## Returns
+
+PrefTrend`
+
+- 変換されたPrefTrendオブジェクト
+
+## Source
+
+[utils.ts:15](https://github.com/minasora/PopulationTrendDisplay/blob/9b6916f2d9e634cddf515d0c9e11d37aa79b4f22/src/libs/utils.ts#L15)

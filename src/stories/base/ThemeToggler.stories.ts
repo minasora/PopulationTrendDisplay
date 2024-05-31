@@ -9,15 +9,15 @@ import "@/app/globals.css";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta = {
-  title: "Example/ThemeToggler",
+  title: "Base/ThemeToggler",
   component: ThemeToggler,
-  tags: ["centered"],
+  tags: ["autodocs"],
   parameters: {
     layout: "centered",
   },
 };
 type Story = StoryObj<typeof meta>;
 export default meta;
-export const First: Story = {
+export const Defalut: Story = {
   args: { lightIcon: LightIcon, darkIcon: DarkIcon },
 };
