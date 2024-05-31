@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { M_PLUS_Rounded_1c } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+
 const m_plus = M_PLUS_Rounded_1c({
   weight: "400",
   subsets: ["latin"],

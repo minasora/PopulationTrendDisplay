@@ -1,10 +1,4 @@
-import {
-  Input,
-  PopulationType,
-  PrefectureCode,
-  PrefTrend,
-  trend,
-} from "./types";
+import {Input, PopulationType, PrefectureCode, PrefTrend, trend,} from "./types";
 
 /**
  * PrefectureCodeとInputを基にPrefTrendオブジェクトを生成します。

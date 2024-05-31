@@ -2,8 +2,8 @@ import ProvinceSelector from "@/components/ui/feature/ProvinceSelector";
 import { ThemeToggler } from "@/components/ui/base/ThemeToggler";
 import Icon from "@/components/ui/base/Icon";
 import { FaGithub } from "react-icons/fa6";
-import "intro.js/introjs.css";
 import IntroGuide from "@/components/IntroGuide";
+import "intro.js/introjs.css";
 
 export default async function Page() {
   return (
@@ -12,7 +12,7 @@ export default async function Page() {
         <div className="flex flex-row justify-between items-center h-8">
           <ThemeToggler />
           <Icon
-            url={"https://github.com/minasora"}
+            url={"https://github.com/minasora/PopulationTrendDisplay"}
             icon={FaGithub}
             className={"w-6 h-6 icon"}
           ></Icon>

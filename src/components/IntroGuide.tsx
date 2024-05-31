@@ -24,7 +24,7 @@ const IntroGuide: React.FC = () => {
           {
             element: ".icon",
             intro:
-              "ここでは、GitHubなどの外部サイトへのリンクを見つけることができます。",
+              "ここでは、このウェブサイトのソースコードのリンクを見つけることができます。",
           },
           {
             element: ".searchbar",

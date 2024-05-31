@@ -1,0 +1,40 @@
+# イントロダクション
+このプロジェクトは、日本の人口動向を視覚化するためのものです。具体的には、都道府県ごとの人口動向を折れ線グラフで表示します。
+## プロジェクトの特徴
+JavaScript、React、TypeScript：これらの技術を使用して、フロントエンドの開発を行います。
+データ視覚化：人口動向データを視覚化するために、折れ線グラフを使用します。
+都道府県ごとのデータ：各都道府県の人口動向データを表示します。
+## 使用方法
+都道府県を選択します。選択すると、その都道府県の人口動向がグラフに表示されます。
+グラフは、選択した都道府県の人口動向を年ごとに表示します。
+さらに詳細なデータを見るためには、グラフ上の特定の点をクリックします。
+## ファイルツリー
+```
+src
+└── app
+    ├── demo
+    │   ├── page.tsx
+    │   ├── favicon.ico
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    └── components
+        ├── ui
+        │   ├── base
+        │   │   ├── Button.tsx
+        │   │   ├── DateRangePicker.tsx
+        │   │   ├── Icon.tsx
+        │   │   └── ThemeToggler.tsx
+        │   ├── chart
+        │   │   ├── TrendGraph.tsx
+        │   │   └── TrendGraphUI.tsx
+        │   └── feature
+        │       ├── PopulationTrendDisplay.tsx
+        │       ├── PopulationTypeSelector.tsx
+        │       ├── ProvinceMap.tsx
+        │       ├── ProvinceSearchBar.tsx
+        │       └── ProvinceSelector.tsx
+        └── layout
+            ├── Footer.tsx
+            └── Header.tsx
+```

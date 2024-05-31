@@ -3,8 +3,9 @@
 import React, { useEffect, useState } from "react";
 import makeAnimated from "react-select/animated";
 import { Prefdata } from "@/libs/utils";
-import { PrefTrend, PrefectureCode } from "@/libs/types";
+import { PrefectureCode, PrefTrend } from "@/libs/types";
 import Select, { ActionMeta, MultiValue } from "react-select";
+
 interface OptionType {
   label: string;
   value: PrefectureCode;
