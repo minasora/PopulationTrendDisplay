@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Line } from "react-chartjs-2";
-import { ChartData } from "chart.js";
+import { ChartData, ChartOptions } from "chart.js";
 
-const getOptions = (darkMode: boolean) => ({
+const getDefaultOptions = (darkMode: boolean): ChartOptions<"line"> => ({
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
@@ -48,6 +48,7 @@ interface TrendGraphUIProps {
   darkMode: boolean;
   chartRef: any;
   data: ChartData<"line">;
+  options?: ChartOptions<"line">;
 }
 
 const TrendGraphUI: FC<TrendGraphUIProps> = ({
@@ -55,13 +56,16 @@ const TrendGraphUI: FC<TrendGraphUIProps> = ({
   darkMode,
   chartRef,
   data,
+  options,
 }) => {
+  const chartOptions = options ?? getDefaultOptions(darkMode);
+
   return (
     <div className={`${className} ${darkMode ? "dark" : ""}`}>
       <div className="relative">
         <Line
           ref={chartRef}
-          options={getOptions(darkMode)}
+          options={chartOptions}
           data={data}
           className="w-full h-96"
         />

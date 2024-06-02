@@ -1,14 +1,15 @@
 "use client";
-import { FC, useRef, useEffect, useState, useMemo } from "react";
+import { FC, useEffect, useMemo, useRef, useState } from "react";
 import {
-  Chart as ChartJS,
   CategoryScale,
+  Chart as ChartJS,
+  ChartOptions,
+  Legend,
   LinearScale,
-  PointElement,
   LineElement,
+  PointElement,
   Title,
   Tooltip,
-  Legend,
 } from "chart.js";
 import { PopulationType, PrefTrend } from "@/libs/types";
 import { extractPopulationTrends } from "@/libs/utils";
@@ -50,6 +51,7 @@ interface TrendGraphProps {
   selectedProvinces: PrefTrend[];
   populationType: PopulationType;
   className?: string;
+  options?: ChartOptions<"line">;
 }
 
 const TrendGraph: FC<TrendGraphProps> = ({

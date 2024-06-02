@@ -37,7 +37,8 @@ const IntroGuide: React.FC = () => {
           },
           {
             element: ".map",
-            intro: "この地図には選択した都道府県が表示されます。",
+            intro:
+              "この地図には選択した都道府県が表示されます。直接都道府県をクリックして選択することもできます。",
           },
           {
             element: ".zoom",
